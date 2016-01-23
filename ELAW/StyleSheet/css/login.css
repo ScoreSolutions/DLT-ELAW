@@ -1,0 +1,447 @@
+@charset "utf-8";
+/* CSS Document */
+
+@charset "utf-8";
+/* CSS Document */
+*{	
+	padding: 0px; 
+	margin: 0px; 
+}
+body {
+	font:12px "Courier New", Courier, monospace; 
+	color: #454545; 
+	text-align:justify;
+	background-image:url(../../images/Menu/bg_master.png);
+	background-repeat:repeat-x;
+	background-attachment:fixed;
+}
+a {
+	background: inherit; color: #454545; text-decoration: none;
+}
+#left a {
+	border-bottom: #fff 1px;;
+}
+#right a {
+	border-bottom: #000 1px dotted;
+}
+a:hover {
+	background: inherit; color: #000;
+}
+p {
+	margin: 0px ;
+	padding:0px;
+}
+h1 {
+	padding-top:0px; padding-right: 10px;padding-bottom: 10px; padding-left: 10px; 
+	margin: 10px 10px 0px 10px;  font: 20px "Courier New", Courier, monospace;
+}
+h2 {
+	padding:0px; 
+	margin: 0px 0px 0px 10px;
+	padding-bottom: 10px; padding-left: 10px; 
+	font: 18px"Courier New", Courier, monospace;
+	color:#666666;
+}
+h1 a {
+	background: inherit; 
+	color: #000; 
+	text-decoration: none;
+}
+h2 a {
+	background: inherit; 
+	color: #666666; 
+	text-decoration: none;
+}
+img {
+	border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;
+}
+
+#content {
+	width: 1003px;
+	margin:auto;
+}
+
+#header {
+	padding:0px 0px 0px 0px; 
+	margin: 0px; 
+	width: 1003px; 
+	height: auto; 
+	color: #cd5c72;
+}
+
+.logo {
+	padding:10px 0px 5px 0px; 
+	width: 1003px;
+	height: 112px;
+}
+
+.mainMenu{ 
+	padding:10px 0 0 0; 
+	margin:0px; 
+	width:1003px; 
+	clear:both; 
+	height: 27px;  	 	
+	background:#bbb;
+	float:left;
+	color:#990000;
+	text-align:center;
+	font-size:16px;
+	vertical-align:middle;
+}
+
+#content2 {
+	width: 1003px;
+	margin:30px 0 0 0;
+	background:#fff;
+}
+
+table{
+	border:0;
+	padding:10px 20px 10px 20px;
+}
+
+#loginMain{
+	width:280px;
+	height:200px;
+	clear:both;
+	margin:65px 300px 25px 335px;
+	background: #EBEBEB url(../../images/Menu/bgLogin.gif) repeat-x;
+	border: 7px solid lightGrey;
+	border-bottom-left-radius: 7px 7px;
+	border-bottom-right-radius: 7px 7px;
+	border-top-left-radius: 7px 7px;
+	border-top-right-radius: 7px 7px;
+}
+.sublogin{
+	width:260px;
+	height:25px;
+	clear:both;
+	margin:0px 5px 0px 13px;
+	font:16px;
+	color:#454545;
+	text-align:left;
+}
+.subtxtlogin{
+	width:260px;
+	height:25px;
+	clear:both;
+	margin:5px 5px 0px 13px;
+	font:16px;
+	color:#454545;
+	text-align:left;
+	vertical-align:middle;
+}
+#loginMain input.textinput {
+	width: 250px;
+	background: transparent url('../../images/Menu/bg.jpg') no-repeat;
+	color : #747862;
+	height:20px;
+	border:0;
+	padding:4px 8px;
+	margin-bottom:0px;
+
+}
+input:focus {
+	border-bottom-color: #77b2ee;
+	text-align:left;
+	vertical-align:sub;
+}
+
+.txtlogin{
+	width:150px;
+	height:80px;
+	float:left;
+	margin:10px 5px 0px 5px;
+	color:#aaa;
+}
+
+.txtRemember{
+	width:150px;
+	height:30px;
+	float:left;
+	margin:10px 10px 0px 10px;
+	color: #990000;
+}
+.txtForgot{
+	width:150px;
+	height:30px;
+	float:left;
+	margin:10px 10px 0px 10px;
+}
+.txtForgot a{
+	color:#666666;
+}
+.txtForgot a:hover{
+	color:#000;
+	text-decoration:underline;
+}
+
+.btnLogin{
+	width:95px;
+	height:60px;
+	float:left;
+	margin:15px 10px 0px 15px;
+	
+	background:url(../../images/Menu/btnLogin.gif) no-repeat;
+}
+.txtbtnLogin{
+	width:70px;
+	height:20px;
+	margin:20px 10px 20px 13px;
+	text-align:center;
+	vertical-align:middle;
+	font-size:16px;
+}
+.txtbtnLogin a{
+	color:#fff;
+}
+.txtbtnLogin a:hover{
+	color:#000000;
+
+}
+
+#footer {
+  padding-top:3px; 
+  padding-right:0px; 
+  padding-bottom: 0px; 
+  padding-left: 0px; 
+  width: 1003px; 
+  height: 35px; 
+  background:#bbb;
+  color: #454545; 
+  clear: both; 
+  text-align:center;
+
+}
+/*****************************************************HACK*******************************************************/
+
+*****hack ie6*****/
+*html .mainMenu{ 
+	padding:0px 0 0 0; 
+	margin:0px; 
+	width:1003px; 
+	clear:both; 
+	height: 27px;  	 	
+	background:#bbb;
+	float:left;
+	color:#990000;
+	text-align:center;
+	font-size:16px;
+	vertical-align:middle;
+}
+*html #content2 {
+	width: 1003px;
+	margin:0px ;
+	background:#fff;
+}
+
+*html #loginMain{
+	width:290px;
+	height:210px;
+	clear:both;
+	margin:65px 300px 25px 355px;
+	background: #EBEBEB url(../../images/Menu/bgLogin.gif) repeat-x;
+	border: 7px solid lightGrey;
+	border-bottom-left-radius: 7px 7px;
+	border-bottom-right-radius: 7px 7px;
+	border-top-left-radius: 7px 7px;
+	border-top-right-radius: 7px 7px;
+}
+*html .sublogin{
+	width:300px;
+	height:25px;
+	clear:both;
+	margin:0px 5px 0px 5px;
+	font:16px;
+	color:#454545;
+	text-align:left;
+}
+*html .subtxtlogin{
+	width:260px;
+	height:25px;
+	clear:both;
+	margin:5px 5px 0px 13px;
+	font:16px;
+	color:#454545;
+	text-align:left;
+	vertical-align:middle;
+}
+*html #loginMain input.textinput {
+	width: 250px;
+	background: transparent url('../../images/Menu/bg.jpg') no-repeat;
+	color : #747862;
+	height:20px;
+	border:0;
+	padding:4px 8px;
+	margin-bottom:0px;
+
+}
+*html input:focus {
+	border-bottom-color: #77b2ee;
+	text-align:left;
+	vertical-align:sub;
+}
+
+*html .txtlogin{
+	width:150px;
+	height:80px;
+	float:left;
+	margin:0px 0px 0px 5px;
+	color:#aaa;
+}
+
+*html .txtRemember{
+	width:150px;
+	height:30px;
+	float:left;
+	margin:5px 0px 0px 0px;
+	color: #990000;
+}
+*html .txtForgot{
+	width:130px;
+	height:30px;
+	float:left;
+	margin:0px 0px 0px 0px;
+}
+*html .txtForgot a{
+	color:#666666;
+}
+*html .txtForgot a:hover{
+	color:#000;
+	text-decoration:underline;
+}
+
+*html .btnLogin{
+	width:90px;
+	height:60px;
+	float:left;
+	margin:15px 10px 0px 15px;
+	
+	background:url(../../images/Menu/btnLogin.gif) no-repeat;
+}
+*html .txtbtnLogin{
+	width:70px;
+	height:20px;
+	margin:20px 10px 20px 13px;
+	text-align:center;
+	vertical-align:middle;
+	font-size:16px;
+}
+*html .txtbtnLogin a{
+	color:#fff;
+}
+*html .txtbtnLogin a:hover{
+	color:#000000;
+
+}
+
+/******end hack ie6*****/
+
+/*****hack ie7*****/
+*+html #content2 {
+	width: 1003px;
+	margin:0px 0 0 0;
+	background:#fff;
+}
+
+*+html #loginMain{
+	width:280px;
+	height:210px;
+	clear:both;
+	margin:65px 300px 25px 355px;
+	background: #EBEBEB url(../../images/Menu/bgLogin.gif) repeat-x;
+	border: 7px solid lightGrey;
+	border-bottom-left-radius: 7px 7px;
+	border-bottom-right-radius: 7px 7px;
+	border-top-left-radius: 7px 7px;
+	border-top-right-radius: 7px 7px;
+}
+*+html .sublogin{
+	width:260px;
+	height:25px;
+	clear:both;
+	margin:0px 0px 0px 5px;
+	font:16px;
+	color:#454545;
+	text-align:left;
+}
+*+html .subtxtlogin{
+	width:260px;
+	height:25px;
+	clear:both;
+	margin:5px 5px 0px 13px;
+	font:16px;
+	color:#454545;
+	text-align:left;
+	vertical-align:middle;
+}
+*+html #loginMain input.textinput {
+	width: 250px;
+	background: transparent url('../../images/Menu/bg.jpg') no-repeat;
+	color : #747862;
+	height:20px;
+	border:0;
+	padding:4px 8px;
+	margin-bottom:0px;
+
+}
+*+html input:focus {
+	border-bottom-color: #77b2ee;
+	text-align:left;
+	vertical-align:sub;
+}
+
+*+html .txtlogin{
+	width:150px;
+	height:80px;
+	float:left;
+	margin:10px 5px 0px 5px;
+	color:#aaa;
+}
+
+*+html .txtRemember{
+	width:150px;
+	height:30px;
+	float:left;
+	margin:10px 10px 0px 10px;
+	color: #990000;
+}
+*+html .txtForgot{
+	width:150px;
+	height:30px;
+	float:left;
+	margin:10px 10px 0px 10px;
+}
+*+html .txtForgot a{
+	color:#666666;
+}
+*+html .txtForgot a:hover{
+	color:#000;
+	text-decoration:underline;
+}
+
+*+html .btnLogin{
+	width:95px;
+	height:60px;
+	float:left;
+	margin:15px 10px 0px 15px;
+	
+	background:url(../../images/Menu/btnLogin.gif) no-repeat;
+}
+*+html .txtbtnLogin{
+	width:70px;
+	height:20px;
+	margin:20px 10px 20px 13px;
+	text-align:center;
+	vertical-align:middle;
+	font-size:16px;
+}
+*+html .txtbtnLogin a{
+	color:#fff;
+}
+*+html .txtbtnLogin a:hover{
+	color:#000000;
+
+}
+
+/******end hack ie7*****/

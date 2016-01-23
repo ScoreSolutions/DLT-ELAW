@@ -1,0 +1,196 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeFile="MasterPage.master.vb" Inherits="MasterPage_MasterPage" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<%@ Register src="../UserControl/ctlSlideMenu.ascx" tagname="ctlSlideMenu" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" id="Head1">
+    
+    <title>Legal Affairs Bureau - Department of Land Transport</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" language="javascript" src="../scripts/novajava.js"></script>
+<script type="text/javascript" language="javascript" src="../scripts/JScript.js?time="& getdate() &""></script>
+<script type="text/javascript" language="javascript" src="../scripts/datetimepicker_css.js"></script>
+<script  language="javascript" type="text/javascript">
+        function popupwindown(url) {
+            //alert('aaa');
+            window.open(url, "_new", "location=no,status=no,resizable=yes,width=750,height=700,scrollbars=yes,menubar=no");
+        }
+        function popupwindown1(url) {
+            //alert('aaa');e
+            window.open(url, "_new", "location=no,status=no,resizable=yes,width=750,height=300,scrollbars=yes,menubar=no");
+        }
+
+        function popupwindown2(url) {
+            //alert('aaa');
+            window.open(url, "_new", "location=no,status=no,resizable=yes,width=600,height=500,scrollbars=yes,menubar=no");
+        }
+
+</script>
+<!--คุณสามารถแก้ไขตำแหน่งให้แสดง MENU ได้ครับ โดย แก้ไขตัวเลขที่ top ครับ-->
+<style>
+<!--
+
+#slidemenubar, #slidemenubar2{
+top:1px;
+position:absolute;
+font-weight:bold;
+border:1.5px solid green;
+background-color:#99FFFF;
+layer-background-color:#99FFFF;
+line-height:20px;
+}
+-->
+</style> 
+
+    <link rel=stylesheet type=text/css href="../StyleSheet/StyleClass.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body onLoad="draw();" style="margin:0" >
+    <iframe frameborder="0" style="position:absolute;z-index:20;width:1px;height:1px" name='menuFrame' id='menuFrame'>
+    </iframe>
+    
+    <form id="form1" runat="server">        
+        <script language="JavaScript1.2">
+        //if (document.all)
+            document.write('');
+        </script>
+        <div id="slidemenubar2" style="padding: 3px 3px 3px 3px; background-color:#015367;z-index:50;" onmouseover="pull();" onmouseout="draw();">
+            <uc1:ctlSlideMenu ID="ctlSlideMenu1" runat="server" />
+        </div>
+        <div id="content">
+			<div id=header>
+                <div class=logo><img src="../images/Menu/top_header.png" /></div>
+				<div class="mainManu">
+                	  <div class="lbLogout"><strong><a href="../Src/Login.aspx">ออกจากระบบ</a></strong></div>
+					  <div class="account"><asp:Label ID="lblUser" runat="server"></asp:Label>
+                      </div>	
+                      <div class="lbUser">ผู้ใช้งาน :<cc1:toolkitscriptmanager ID="ToolkitScriptManager1" runat="server" 
+                    enablescriptglobalization="True">
+                        </cc1:toolkitscriptmanager>
+                      </div>	
+                </div>
+		        <div id="right">
+                     <table width="100%" border="0" height="393px" >
+                       <tr valign="top">
+                         <td>	
+                 		        <!--content -->
+                           	            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                
+                                        </asp:ContentPlaceHolder>
+                                <!--end content -->
+                         </td>
+                       </tr>
+                     </table>
+                </div>
+		    </div>
+			<div id=footer> กรมการขนส่งทางบก 1032 ถนนพหลโยธิน แขวงจอมพล เขตจตุจักร กรุงเทพมหานคร 
+                10900. โทรศัพท์ (หมายเลขกลาง) 0-2271-8888<br />
+		        Call Center และศูนย์คุ้มครองผู้โดยสารสาธารณะ : โทรศัพท์ 1584 </div>
+        </div>
+
+    </form>
+</body>
+</html>
+<script >
+    // initial value
+    mnu = document.getElementById('menuFrame');
+    themenu = document.getElementById('slidemenubar2').style;
+    rightboundary=0;
+    if (document.all) {
+        window.onload=regenerate2
+    }
+    setValue();
+
+    // working function
+
+    function regenerate(){
+        window.location.reload()
+    }
+    function regenerate2(){
+        if (document.layers)
+            setTimeout("window.onresize=regenerate",1800)
+    }
+    function setValue() {
+            leftboundary=-1 * (getWide() - 20);
+            mnu.style.height=getHeight();
+    }
+
+    function pull(){
+        setValue();
+        if (document.all) {
+            if (window.drawit)
+                clearInterval(drawit)
+            pullit=setInterval("pullengine()",2)
+        }
+        else 
+        {
+            themenu.left="0" + "px";
+        }
+    }
+
+    function draw(){
+        setValue();
+        if (document.all) {
+            clearInterval(pullit)
+            drawit=setInterval("drawengine()",2)
+        }
+        else
+        {
+            themenu.left= -1 * (getWide() - 20) + "px";
+        }
+    }
+
+    function pullengine(){
+        if (document.all&&themenu.pixelLeft<rightboundary) {
+            if (themenu.pixelLeft < -15) {
+               themenu.pixelLeft+=15;
+                mnu.style.pixelLeft+=15;
+               }
+             else {
+               themenu.pixelLeft = 0;
+               mnu.style.pixelLeft = 0;
+             }
+               
+        }
+        else if (window.pullit)
+            clearInterval(pullit)
+    }
+
+    function drawengine(){
+        if (document.all&&themenu.pixelLeft>leftboundary) {
+            if (themenu.pixelLeft - leftboundary < 15) {
+                themenu.pixelLeft = leftboundary;
+                mnu.style.pixelLeft = leftboundary;
+            }
+            else {
+                mnu.style.pixelLeft-=15;
+                themenu.pixelLeft-=15
+            }
+        }
+        else if (window.drawit)
+            clearInterval(drawit)
+    }
+    function getWide()
+    {
+        return document.getElementById('slidemenubar2').offsetWidth;
+    }
+    function getHeight()
+    {
+        return document.getElementById('slidemenubar2').offsetHeight;
+    }
+
+    themenu.top = "150px";
+    if (getWide() > 20) 
+        themenu.left = -1 * (getWide() - 20) + "px";
+
+    mnu.style.width=getWide();
+    mnu.style.height=getHeight();
+    mnu.style.top=themenu.top;
+    mnu.style.left=themenu.left;
+</script>

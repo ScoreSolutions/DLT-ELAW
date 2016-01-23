@@ -1,0 +1,134 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPageProfile.master.vb" Inherits="Profile_MasterPageProfile" %>
+
+<%@ Register src="UserControlPoll.ascx" tagname="UserControlPoll" tagprefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>DEPARTMENT OF LAND TRANSPORT</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" language="javascript" src="JScript.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+ 
+</head>
+<body>
+    <form id="form1" runat="server">
+  <!-- Begin Wrapper -->
+   <div id="wrapper">
+   
+         <!-- Begin Header -->
+     <div id="header"></div>
+		 <!-- End Header -->
+		 
+		 <!-- Begin Navigation -->
+         <div id="navigation">		 
+                 <ul>                                              
+                    <li><a class="current" href="Default.aspx" title="">หน้าแรก</a></li>
+                    <li><a href="SearchLaw.aspx" title="Services">บริการข้อมูลกฎหมาย</a></li>
+                    <li><a href="http://172.20.254.72:8080" title="Store">เข้าสู่ระบบ</a></li>
+                </ul>  		   
+		 </div>
+		 <!-- End Navigation -->
+		 
+		 <!-- Begin Left Column -->
+	
+	            <div id="left">
+	      			<div class="manuLeft">
+                                                    
+                         <div class="Lheader"><strong>เมนูหลัก</strong></div>
+                           <div class="subheaderMenu"><a href="About.aspx">เกี่ยวกับสำนัก ฯ</a></div>
+                           <div class="subheaderMenu"><a href="SearchLaw.aspx">บริการข้อมูลกฎหมาย</a></div>
+                           <div class="subheaderMenu"><a href="LawArticle.aspx">บทความและคดีที่น่าสนใจ</a></div>
+                           <div class="subheaderMenu"><a href="ContractForm.aspx">แบบสัญญาต่างๆ</a></div>
+                           <div class="subheaderMenu"><a href="Contact.aspx">ติดต่อเรา</a></div>
+                           
+                         <div class="Lheader"><strong>สาระน่ารู้</strong></div>
+                            <div class="subheaderMenu"><a href="LawNews.aspx">
+                                ข่าวสำนักกฎหมาย</a></div>
+                         <div class="subheaderMenu"><a href="ClientQuetions.aspx">
+                                ฝากคำถามทางกฎหมาย</a></div>
+                            
+                         <div class="Lheader"><strong>ความพึงพอใจ</strong></div>
+                            
+                            <div class ="subvote">
+                                <uc2:UserControlPoll ID="UserControlPoll1" runat="server" />
+                         </div>
+           
+                           <div class="Lheader"><strong>จำนวนผู้เข้าชม</strong></div>
+                            <div class="subheaderMenu"><a href="../Src/BookKind.aspx">
+                             <b>ผู้เข้าชมทั้งหมด&nbsp;<asp:Label ID="lblCount" runat="server" Text=""></asp:Label>&nbsp;คน</b>
+                                </a></div>
+           
+            </div>
+			 </div>
+	         
+	            <div id="content">
+            <table width="100%" border="0" height="700px" >
+				<tr valign="top">
+				  <td>
+				    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
+				      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">       
+                     
+                          
+                    </asp:ContentPlaceHolder>
+                     </td>
+				</tr>
+			</table>    
+		 </div>
+	     <div id="footer">
+		       <table width="100%" border="0" cellpadding="3" cellspacing="3">
+				    <tr valign="top">
+				        <td align="center" >
+				        <a href="http://www.siamlaw.com/" target="_blank">
+				            <img alt="" src="Images/Banner/LawSiam.gif" width="150px"  Height="74px" /></a></td>
+				        <td align="center" >
+				        <a href="http://www.led.go.th" target="_blank">
+				            <img alt="" src="Images/Banner/cab.gif" width="150px" Height="74px" /></a>
+				        </td>
+				        <td align="center" >
+				        <a href="http://www.ratchakitcha.soc.go.th" target="_blank">
+				            <img alt="" src="Images/Banner/rat.gif" width="150px" Height="74px" /></a>
+				        </td>
+				        <td align="center" >
+				        <a href="http://www.cabinet.thaigov.go.th" target="_blank">
+				            <img alt="" src="Images/Banner/Soc.gif" width="150px" Height="74px" /></a>
+				        </td>
+				        <td align="center" >
+				        <a href="http://www.coj.go.th" target="_blank">
+				            <img alt="" src="Images/Banner/LawYut.gif" width="150px" Height="74px" /></a></td>
+				    </tr>
+				    <tr valign="top">
+				        <td align="center" >
+				        <a href="http://www.parliament.go.th/main01.php" target="_blank">
+				            <img alt="" src="Images/Banner/LawRat.gif" width="150px" Height="74px" /></a>
+				        </td>
+				        <td align="center" >
+				        <a href="http://www.kodmhai.com/" target="_blank">
+				            <img alt="" src="Images/Banner/LawDot.gif" width="150px" Height="74px" /></a></td>
+				        <td align="center" >
+				        <a href="http://www.admincourt.go.th" target="_blank">
+				            <img alt="" src="Images/Banner/LawProk.gif" width="150px" Height="74px" /></a></td>
+				        <td align="center" >
+				        <a href="http://www.krisdika.go.th" target="_blank">
+				            <img alt="" src="Images/Banner/LawKrit.gif" width="150px" Height="74px" /></a></td>
+				        <td align="center" >
+				        <a href="http://www.mot.go.th" target="_blank">
+				            <img alt="" src="Images/Banner/komnakom.gif" width="150px" Height="74px" /></a></td>
+				    </tr>
+				    </table>
+			        กรมการขนส่งทางบก 1032 ถนนพหลโยธิน แขวงจอมพล เขตจตุจักร กรุงเทพมหานคร 10900. 
+                    โทรศัพท์ (หมายเลขกลาง) 0-2271-8888<br />
+		            Call Center และศูนย์คุ้มครองผู้โดยสารสาธารณะ : โทรศัพท์ 1584<br />
+	                สำนักกฎหมาย : โทรศัพท์ 0-2271-8789-93
+                    <br />
+                    โทรสาร : 0-2271-8790,0-2271-8793</div>
+		 <!-- End Footer -->
+   </div>
+   <!-- End Wrapper -->
+    </form>
+</body>
+</html>

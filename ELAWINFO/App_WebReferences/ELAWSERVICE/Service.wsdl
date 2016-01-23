@@ -1,0 +1,1278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="TestConnection">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestConnectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TestConnectionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getConnectionString">
+        <s:complexType />
+      </s:element>
+      <s:element name="getConnectionStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getConnectionStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestDBConnect">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestDBConnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TestDBConnectResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InitConnection">
+        <s:complexType />
+      </s:element>
+      <s:element name="InitConnectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InitConnectionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDataSetTableName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDataSetTableNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDataSetTableNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecCommand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecCommandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecCommandResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecCommandRowRet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecCommandRowRetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecCommandRowRetResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getServerDate">
+        <s:complexType />
+      </s:element>
+      <s:element name="getServerDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getServerDateResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVersions">
+        <s:complexType />
+      </s:element>
+      <s:element name="getVersionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVersionsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveTextToFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FullPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveTextToFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveTextToFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFullNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocType">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDocTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocSubType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocSubTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocSubTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchKeyWord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="txtKeyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TypeContract" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TypeCase" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchKeyWordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchKeyWordResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setKeyWord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="txtKeyword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setKeyWordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setKeyWordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveKeyword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="txtWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveKeywordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveKeywordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataLaw">
+        <s:complexType />
+      </s:element>
+      <s:element name="DataLawResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DataLawResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataContract">
+        <s:complexType />
+      </s:element>
+      <s:element name="DataContractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DataContractResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataCase">
+        <s:complexType />
+      </s:element>
+      <s:element name="DataCaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DataCaseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocIdDownload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocIdDownloadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocIdDownloadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocIdDownload2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocIdDownload2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocIdDownload2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocIdDownloadSelect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocIdDownloadSelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocIdDownloadSelectResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setPublicCounter">
+        <s:complexType />
+      </s:element>
+      <s:element name="setPublicCounterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="setPublicCounterResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPublicCounter">
+        <s:complexType />
+      </s:element>
+      <s:element name="getPublicCounterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getPublicCounterResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setLawCounter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LawID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setLawCounterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="setLawCounterResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLawCounter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LawID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLawCounterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getLawCounterResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TestConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnection" />
+  </wsdl:message>
+  <wsdl:message name="TestConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getConnectionStringSoapIn">
+    <wsdl:part name="parameters" element="tns:getConnectionString" />
+  </wsdl:message>
+  <wsdl:message name="getConnectionStringSoapOut">
+    <wsdl:part name="parameters" element="tns:getConnectionStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestDBConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:TestDBConnect" />
+  </wsdl:message>
+  <wsdl:message name="TestDBConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:TestDBConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="InitConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:InitConnection" />
+  </wsdl:message>
+  <wsdl:message name="InitConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:InitConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDataSetTableNameSoapIn">
+    <wsdl:part name="parameters" element="tns:getDataSetTableName" />
+  </wsdl:message>
+  <wsdl:message name="getDataSetTableNameSoapOut">
+    <wsdl:part name="parameters" element="tns:getDataSetTableNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:getDataSet" />
+  </wsdl:message>
+  <wsdl:message name="getDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:getDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecCommandSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecCommand" />
+  </wsdl:message>
+  <wsdl:message name="ExecCommandSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecCommandRowRetSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecCommandRowRet" />
+  </wsdl:message>
+  <wsdl:message name="ExecCommandRowRetSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecCommandRowRetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getServerDateSoapIn">
+    <wsdl:part name="parameters" element="tns:getServerDate" />
+  </wsdl:message>
+  <wsdl:message name="getServerDateSoapOut">
+    <wsdl:part name="parameters" element="tns:getServerDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVersionsSoapIn">
+    <wsdl:part name="parameters" element="tns:getVersions" />
+  </wsdl:message>
+  <wsdl:message name="getVersionsSoapOut">
+    <wsdl:part name="parameters" element="tns:getVersionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveTextToFileSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveTextToFile" />
+  </wsdl:message>
+  <wsdl:message name="SaveTextToFileSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveTextToFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFullName" />
+  </wsdl:message>
+  <wsdl:message name="GetFullNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFullNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocType" />
+  </wsdl:message>
+  <wsdl:message name="GetDocTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocSubTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocSubType" />
+  </wsdl:message>
+  <wsdl:message name="GetDocSubTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocSubTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchKeyWordSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchKeyWord" />
+  </wsdl:message>
+  <wsdl:message name="SearchKeyWordSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchKeyWordResponse" />
+  </wsdl:message>
+  <wsdl:message name="setKeyWordSoapIn">
+    <wsdl:part name="parameters" element="tns:setKeyWord" />
+  </wsdl:message>
+  <wsdl:message name="setKeyWordSoapOut">
+    <wsdl:part name="parameters" element="tns:setKeyWordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveKeywordSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveKeyword" />
+  </wsdl:message>
+  <wsdl:message name="SaveKeywordSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveKeywordResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataLawSoapIn">
+    <wsdl:part name="parameters" element="tns:DataLaw" />
+  </wsdl:message>
+  <wsdl:message name="DataLawSoapOut">
+    <wsdl:part name="parameters" element="tns:DataLawResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataContractSoapIn">
+    <wsdl:part name="parameters" element="tns:DataContract" />
+  </wsdl:message>
+  <wsdl:message name="DataContractSoapOut">
+    <wsdl:part name="parameters" element="tns:DataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataCaseSoapIn">
+    <wsdl:part name="parameters" element="tns:DataCase" />
+  </wsdl:message>
+  <wsdl:message name="DataCaseSoapOut">
+    <wsdl:part name="parameters" element="tns:DataCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchDetail" />
+  </wsdl:message>
+  <wsdl:message name="SearchDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocIdDownloadSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocIdDownload" />
+  </wsdl:message>
+  <wsdl:message name="GetDocIdDownloadSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocIdDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocIdDownload2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocIdDownload2" />
+  </wsdl:message>
+  <wsdl:message name="GetDocIdDownload2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocIdDownload2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetDocIdDownloadSelectSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocIdDownloadSelect" />
+  </wsdl:message>
+  <wsdl:message name="GetDocIdDownloadSelectSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocIdDownloadSelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="setPublicCounterSoapIn">
+    <wsdl:part name="parameters" element="tns:setPublicCounter" />
+  </wsdl:message>
+  <wsdl:message name="setPublicCounterSoapOut">
+    <wsdl:part name="parameters" element="tns:setPublicCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPublicCounterSoapIn">
+    <wsdl:part name="parameters" element="tns:getPublicCounter" />
+  </wsdl:message>
+  <wsdl:message name="getPublicCounterSoapOut">
+    <wsdl:part name="parameters" element="tns:getPublicCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="setLawCounterSoapIn">
+    <wsdl:part name="parameters" element="tns:setLawCounter" />
+  </wsdl:message>
+  <wsdl:message name="setLawCounterSoapOut">
+    <wsdl:part name="parameters" element="tns:setLawCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLawCounterSoapIn">
+    <wsdl:part name="parameters" element="tns:getLawCounter" />
+  </wsdl:message>
+  <wsdl:message name="getLawCounterSoapOut">
+    <wsdl:part name="parameters" element="tns:getLawCounterResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="TestConnection">
+      <wsdl:input message="tns:TestConnectionSoapIn" />
+      <wsdl:output message="tns:TestConnectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getConnectionString">
+      <wsdl:input message="tns:getConnectionStringSoapIn" />
+      <wsdl:output message="tns:getConnectionStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestDBConnect">
+      <wsdl:input message="tns:TestDBConnectSoapIn" />
+      <wsdl:output message="tns:TestDBConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InitConnection">
+      <wsdl:input message="tns:InitConnectionSoapIn" />
+      <wsdl:output message="tns:InitConnectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDataSetTableName">
+      <wsdl:input message="tns:getDataSetTableNameSoapIn" />
+      <wsdl:output message="tns:getDataSetTableNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDataSet">
+      <wsdl:input message="tns:getDataSetSoapIn" />
+      <wsdl:output message="tns:getDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecCommand">
+      <wsdl:input message="tns:ExecCommandSoapIn" />
+      <wsdl:output message="tns:ExecCommandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecCommandRowRet">
+      <wsdl:input message="tns:ExecCommandRowRetSoapIn" />
+      <wsdl:output message="tns:ExecCommandRowRetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getServerDate">
+      <wsdl:input message="tns:getServerDateSoapIn" />
+      <wsdl:output message="tns:getServerDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVersions">
+      <wsdl:input message="tns:getVersionsSoapIn" />
+      <wsdl:output message="tns:getVersionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTextToFile">
+      <wsdl:input message="tns:SaveTextToFileSoapIn" />
+      <wsdl:output message="tns:SaveTextToFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullName">
+      <wsdl:input message="tns:GetFullNameSoapIn" />
+      <wsdl:output message="tns:GetFullNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocType">
+      <wsdl:input message="tns:GetDocTypeSoapIn" />
+      <wsdl:output message="tns:GetDocTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocSubType">
+      <wsdl:input message="tns:GetDocSubTypeSoapIn" />
+      <wsdl:output message="tns:GetDocSubTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchKeyWord">
+      <wsdl:input message="tns:SearchKeyWordSoapIn" />
+      <wsdl:output message="tns:SearchKeyWordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setKeyWord">
+      <wsdl:input message="tns:setKeyWordSoapIn" />
+      <wsdl:output message="tns:setKeyWordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveKeyword">
+      <wsdl:input message="tns:SaveKeywordSoapIn" />
+      <wsdl:output message="tns:SaveKeywordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataLaw">
+      <wsdl:input message="tns:DataLawSoapIn" />
+      <wsdl:output message="tns:DataLawSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataContract">
+      <wsdl:input message="tns:DataContractSoapIn" />
+      <wsdl:output message="tns:DataContractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataCase">
+      <wsdl:input message="tns:DataCaseSoapIn" />
+      <wsdl:output message="tns:DataCaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchDetail">
+      <wsdl:input message="tns:SearchDetailSoapIn" />
+      <wsdl:output message="tns:SearchDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocIdDownload">
+      <wsdl:input message="tns:GetDocIdDownloadSoapIn" />
+      <wsdl:output message="tns:GetDocIdDownloadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocIdDownload2">
+      <wsdl:input message="tns:GetDocIdDownload2SoapIn" />
+      <wsdl:output message="tns:GetDocIdDownload2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocIdDownloadSelect">
+      <wsdl:input message="tns:GetDocIdDownloadSelectSoapIn" />
+      <wsdl:output message="tns:GetDocIdDownloadSelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setPublicCounter">
+      <wsdl:input message="tns:setPublicCounterSoapIn" />
+      <wsdl:output message="tns:setPublicCounterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPublicCounter">
+      <wsdl:input message="tns:getPublicCounterSoapIn" />
+      <wsdl:output message="tns:getPublicCounterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setLawCounter">
+      <wsdl:input message="tns:setLawCounterSoapIn" />
+      <wsdl:output message="tns:setLawCounterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLawCounter">
+      <wsdl:input message="tns:getLawCounterSoapIn" />
+      <wsdl:output message="tns:getLawCounterSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://tempuri.org/TestConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConnectionString">
+      <soap:operation soapAction="http://tempuri.org/getConnectionString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestDBConnect">
+      <soap:operation soapAction="http://tempuri.org/TestDBConnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitConnection">
+      <soap:operation soapAction="http://tempuri.org/InitConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDataSetTableName">
+      <soap:operation soapAction="http://tempuri.org/getDataSetTableName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDataSet">
+      <soap:operation soapAction="http://tempuri.org/getDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecCommand">
+      <soap:operation soapAction="http://tempuri.org/ExecCommand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecCommandRowRet">
+      <soap:operation soapAction="http://tempuri.org/ExecCommandRowRet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServerDate">
+      <soap:operation soapAction="http://tempuri.org/getServerDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersions">
+      <soap:operation soapAction="http://tempuri.org/getVersions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTextToFile">
+      <soap:operation soapAction="http://tempuri.org/SaveTextToFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullName">
+      <soap:operation soapAction="http://tempuri.org/GetFullName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocType">
+      <soap:operation soapAction="http://tempuri.org/GetDocType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocSubType">
+      <soap:operation soapAction="http://tempuri.org/GetDocSubType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchKeyWord">
+      <soap:operation soapAction="http://tempuri.org/SearchKeyWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setKeyWord">
+      <soap:operation soapAction="http://tempuri.org/setKeyWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveKeyword">
+      <soap:operation soapAction="http://tempuri.org/SaveKeyword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataLaw">
+      <soap:operation soapAction="http://tempuri.org/DataLaw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataContract">
+      <soap:operation soapAction="http://tempuri.org/DataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataCase">
+      <soap:operation soapAction="http://tempuri.org/DataCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDetail">
+      <soap:operation soapAction="http://tempuri.org/SearchDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocIdDownload">
+      <soap:operation soapAction="http://tempuri.org/GetDocIdDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocIdDownload2">
+      <soap:operation soapAction="http://tempuri.org/GetDocIdDownload2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocIdDownloadSelect">
+      <soap:operation soapAction="http://tempuri.org/GetDocIdDownloadSelect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setPublicCounter">
+      <soap:operation soapAction="http://tempuri.org/setPublicCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPublicCounter">
+      <soap:operation soapAction="http://tempuri.org/getPublicCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLawCounter">
+      <soap:operation soapAction="http://tempuri.org/setLawCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLawCounter">
+      <soap:operation soapAction="http://tempuri.org/getLawCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestConnection">
+      <soap12:operation soapAction="http://tempuri.org/TestConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConnectionString">
+      <soap12:operation soapAction="http://tempuri.org/getConnectionString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestDBConnect">
+      <soap12:operation soapAction="http://tempuri.org/TestDBConnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InitConnection">
+      <soap12:operation soapAction="http://tempuri.org/InitConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDataSetTableName">
+      <soap12:operation soapAction="http://tempuri.org/getDataSetTableName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDataSet">
+      <soap12:operation soapAction="http://tempuri.org/getDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecCommand">
+      <soap12:operation soapAction="http://tempuri.org/ExecCommand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecCommandRowRet">
+      <soap12:operation soapAction="http://tempuri.org/ExecCommandRowRet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServerDate">
+      <soap12:operation soapAction="http://tempuri.org/getServerDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVersions">
+      <soap12:operation soapAction="http://tempuri.org/getVersions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTextToFile">
+      <soap12:operation soapAction="http://tempuri.org/SaveTextToFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullName">
+      <soap12:operation soapAction="http://tempuri.org/GetFullName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocType">
+      <soap12:operation soapAction="http://tempuri.org/GetDocType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocSubType">
+      <soap12:operation soapAction="http://tempuri.org/GetDocSubType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchKeyWord">
+      <soap12:operation soapAction="http://tempuri.org/SearchKeyWord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setKeyWord">
+      <soap12:operation soapAction="http://tempuri.org/setKeyWord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveKeyword">
+      <soap12:operation soapAction="http://tempuri.org/SaveKeyword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataLaw">
+      <soap12:operation soapAction="http://tempuri.org/DataLaw" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataContract">
+      <soap12:operation soapAction="http://tempuri.org/DataContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataCase">
+      <soap12:operation soapAction="http://tempuri.org/DataCase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchDetail">
+      <soap12:operation soapAction="http://tempuri.org/SearchDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocIdDownload">
+      <soap12:operation soapAction="http://tempuri.org/GetDocIdDownload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocIdDownload2">
+      <soap12:operation soapAction="http://tempuri.org/GetDocIdDownload2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocIdDownloadSelect">
+      <soap12:operation soapAction="http://tempuri.org/GetDocIdDownloadSelect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setPublicCounter">
+      <soap12:operation soapAction="http://tempuri.org/setPublicCounter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPublicCounter">
+      <soap12:operation soapAction="http://tempuri.org/getPublicCounter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setLawCounter">
+      <soap12:operation soapAction="http://tempuri.org/setLawCounter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLawCounter">
+      <soap12:operation soapAction="http://tempuri.org/getLawCounter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost:1750/ELAWINFO/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost:1750/ELAWINFO/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

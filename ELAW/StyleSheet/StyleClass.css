@@ -1,0 +1,436 @@
+﻿body {
+	font:12px Arial, "Courier New",Arial, Courier, monospace; 
+	color: #454545; 
+	background-image:url(../images/Menu/bg_master.png);
+	background-repeat:repeat-x;
+	background-attachment:fixed;
+
+}
+.TextView
+{
+	font-family:Tahoma; 
+	font-size:10pt; 
+	color:#7d129c; 
+	background-color:#EEEEEE; 
+	vertical-align:baseline; 
+	border:#EEEEEE 2px solid;
+}
+
+.TextBox {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+	height: 18px;
+	border: 1px solid #9597aa;
+	color: #454547;
+}
+
+.zHidden { display:none; }
+.modalBackground {
+    background-color: Gray;
+    filter:alpha(opacity=70);
+    opacity:0.7;
+}
+
+.modalPopupSearch {
+    background-color:#ffffff;
+    border-width:3px;
+    border-style:solid;
+    border-color:Gray;
+    padding:3px;
+    width:800px;
+    height:600px;
+    overflow:scroll;
+}
+
+.t_tablestyle { table-layout: fixed; border-width: 1px; BORDER-TOP: thin outset; BORDER-BOTTOM: thin outset; border-right: thin outset; BORDER-LEFT: thin outset; padding:2px}
+.t_headtext { font-weight:bold; color:#491364; background-image:url(../Images/header_table_bg.png); background-repeat: repeat-x; background-color:#e4cafe; height: 25px}
+.t_alt_bg { background-color: #ecd9f6; }
+
+.logo {
+	padding:10px 0px 5px 0px; 
+	width: 1003px;
+	height: 140px;
+}
+
+.mainManu{ 
+	padding:0px; 
+	margin:0px; 
+	width:1003px; 
+	clear:both; 
+	height: 27px;  	
+	font-size: 12px; 	
+	background:#015367;
+	float:left;
+}
+.Book{ 
+	padding:5px; 
+	margin:0px; 
+	width:200px; 
+	clear:both; 
+	height: 27px;  	
+	font-size: 12px; 
+	float:left;
+}
+.lbLogout{
+	padding-top: 5px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px; 
+	margin: 0px 0px 0px; 
+	width: 100px; 
+	float: right; 
+	height: 24px; 
+	font-size: 13px; 
+	vertical-align: middle; 
+	text-decoration: none;
+	background:url(../images/Menu/menu2.gif);
+	text-align:left;
+}
+.lbLogout a {
+	color:#ccc;
+	background:none;
+}
+.lbLogout a:hover {
+	color: #ff0000; 
+	background:none;
+}
+
+.lbUser{ 
+	padding-top:5px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px; 
+	margin: 0px; 
+	width: 60px; 
+	float: right; 
+	height: 24px; 
+	font-size: 12px; 
+	vertical-align: middle; 
+	text-decoration: none;
+	text-align:left; 
+	color:#ccc;
+}
+.account{ 
+	padding-top: 5px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px; 
+	margin: 0px; 
+	width: 250px; 
+	float: right; 
+	height: 24px; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px; 
+	text-decoration: none;
+	text-align:left; 
+	vertical-align:middle;
+	/*color:#5fbdce;*/
+	color:#66FFFF;
+}
+
+#content {
+	width: 100%;
+	margin:auto;
+}
+
+#header {
+	padding:0px 0px 0px 0px; 
+	margin: 0px; 
+	width: 1003px; 
+	height: auto; 
+	color: #cd5c72;
+}
+
+#right {
+	padding-top: 0px;
+	padding-right: 3px;
+	padding-bottom: 0px; 
+	padding-left: 20px; 
+	border-top:#EBF1F3 2px solid;
+	color:#454545;
+	background:#fff;
+}
+
+#footer {
+  padding-top:3px; 
+  padding-right:0px; 
+  padding-bottom: 0px; 
+  padding-left: 0px; 
+  width: 1003px; 
+  height: 35px; 
+  background:#015367;
+  color: #5fbdce; 
+  clear: both; 
+  text-align:center;
+
+}
+
+.sslbl
+{
+    font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	font-weight :normal;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+   	
+}
+.sslbl_red
+{
+    font: 12px Arial,"Courier New", Courier, monospace;
+	color: Red;
+	font-weight :normal;
+	padding: 1px;
+   	
+}
+.sslbl_bold
+{
+    color: #000000;
+	font-weight :bold;
+	text-decoration: none;
+	vertical-align:top;
+	padding: 1px;
+        font-style: normal;
+    font-variant: normal;
+    font-size: 12px;
+    line-height: normal;
+    font-family: Arial, "Courier New", Courier, monospace;
+}
+.sslbl_black
+{
+    font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	font-weight :bold;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+   	
+}
+.sslbl_black_n
+{
+    font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	font-weight :normal;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+   	
+}
+.sslbl_gray
+{
+    font: 12px Arial,"Courier New", Courier, monospace;
+    background-color: #CCCCCC;
+	color: #000000;
+	font-weight :bold;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+   	
+}
+.sslbl_right
+{
+    font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	font-weight :normal;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+	text-align :right ;
+   	
+}
+.ssddl 
+{
+	font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	font-weight :normal;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+}
+
+.ssddl_right
+{
+	font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	text-decoration: none;
+	background-color: White;
+    margin-left: 0px;
+    text-align :right ;
+}
+
+
+.ssDropDownList {
+	font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	text-decoration: none;
+	background-color: #FFFFFF;
+}
+
+.ssDropDownList {
+	font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	text-decoration: none;
+	background-color: #FFFFFF;
+}
+
+.ssddlcus {
+	font: 12px Arial,"Courier New", Courier, monospace;
+}
+
+.ssCheckBox {
+	font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	text-decoration: none;
+	
+}
+
+.ssbtn {
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 14px;
+	text-decoration: none;
+	width: 70px;
+	cursor:hand;
+}
+
+table.form 
+{
+	width:100%;
+}
+table.form td.head 
+{
+    font: 12px Arial,"Courier New", Courier, monospace;
+
+}
+table.form 
+{
+	/*background-color: #FFFFFF;*/
+	width:100%;
+    height: 36px;
+}
+table.form td.caption 
+{
+	font: 12px Arial,"Courier New", Courier, monospace;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #006699;/*table head*/
+	vertical-align:top;
+	}
+
+table.form td.caption 
+{
+	font: 12px Arial,"Courier New", Courier, monospace; 
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #006699;/*table head*/
+	vertical-align:top;
+	}
+
+table.form td.caption_cus
+{
+	font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	background-color: #6699ff;
+	vertical-align:top;
+	
+}
+table.form td.caption1 
+{
+	font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	background-color: #6699ff;
+	font-size: 14px;
+	width: 15%; 
+		
+}
+table.form td.detail 
+{
+	font: 12px Arial,"Courier New", Courier, monospace; 
+	color: #000000;	
+	background-color: #D7EBFF;/*table detail*/
+	vertical-align:top;
+}
+table.form td.detail_cus 
+{
+	font: 12px Arial,"Courier New", Courier, monospace;
+	color: #000000;
+	background-color: #e6e6fa;
+	vertical-align:top;
+	
+}
+table.form td.note {
+	font-size:10px;
+	color: #000000;
+	background-color: #FFCBA8;
+}
+table.form td.foot {
+	font-size: 12px;
+	color: #FF6F0F;
+	background-color: #000000;
+}
+gw_cs
+		{
+	
+	font: 12px Arial,"Courier New", Courier, monospace;
+	font-weight:normal;
+	width:100%;
+	text-align: left;
+		
+		
+}
+th {
+	background-color: #007DB3;
+	font: 12px Arial,"Courier New", Courier, monospace;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	color: Black;
+	background-image: url(../images/th_bg.gif);
+    
+}
+
+
+/*Gridview Styles*/
+.GridViewStyle
+{   
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+    font-size:14px;
+    border: 1px solid gray;
+	padding: 4px;
+	height:auto;
+	text-align: left;
+	
+}
+
+.HeaderGreen
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	color:#4D4D4D;
+	font-weight:bold;
+	font-size: 16px;
+	background-color:#CAEBF4;
+	height :25px;
+	padding: 2px;
+    width: 100%;
+}
+.HeaderGreenTab
+{   
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+   	color:#4D4D4D;
+	font-weight:bold;
+	font-size: 16px;
+	background-color:#CAEBF4;
+	height :25px;
+	padding: 2px;
+    width: 100%;
+}
+.HeaderTab
+{   
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+   	color:#4D4D4D;
+	font-weight:bold;
+	font-size: 14px;
+	background-color:#CAEBF4;
+	height :20px;
+	padding: 2px;
+}

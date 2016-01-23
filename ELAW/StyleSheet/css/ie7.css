@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/***************************Hack IE7 ***********************************/
+*+html .lbBullet{ 
+	padding-top: 3px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px; 
+	margin: 10px 0px 0px 15px ; 
+	width: 20px; 
+	float: left; 
+	height: 24px;  
+	background:#37b6ce;
+}
+*+html .subtitle{
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-bottom: 0px;
+	padding-right: 0px; 
+	margin: 10px 10px 10px 0px ;  
+	width: 690px; 
+	float: left; 
+	height: 24px; 
+	background: #EBF1F3;
+	font: 16px "Courier New", Courier, monospace;
+	text-align:left;
+	vertical-align:middle;
+	color: #003366;
+	text-align:left
+}
+
+*+html .Lheader{
+	width:200px;
+	height:27px;
+	border: 0px; 
+	margin: 0px; 
+	padding-top: 12px;
+	padding-right: 0px; 
+	padding-bottom:0px; 
+	padding-left:: 0px;
+	background: url(../../images/Menu/btnManuLeft.png); 
+	font-size: 12px; 
+	text-align:center;
+	vertical-align:middle;
+	color: #fff;
+}

@@ -1,0 +1,124 @@
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/MasterPageProfile.master" AutoEventWireup="false" CodeFile="UploadELaw.aspx.vb" Inherits="UploadELaw" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <center>
+    <div>
+     <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="conditional">
+                    <Triggers>
+                        <asp:PostBackTrigger ControlID="btnCreateELAW" />
+                    </Triggers>
+            <ContentTemplate>    
+    <table style="width:100%;">
+            <tr>
+                <td><h1>อัพโหลดบทความ</h1></td>
+            </tr>
+            </table> 
+        <asp:Panel ID="PanelCreate" runat="server">
+        <table style="width:100%;">
+            <tr>
+                <td align="left" width="20%" colspan="2">สร้างบทความ</td>
+            </tr>
+            <tr>
+                <td  width = "20%" align = "right">เรื่อง : </td>
+                <td align ="left"><asp:TextBox ID="txtELAW" runat="server" Width="380px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="20%" valign="top" >
+                    รายละเอียด :</td>
+                <td align="left">
+                    <asp:TextBox ID="txtDetail" runat="server" Width="380px" 
+                        TextMode="MultiLine" Height="61px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td  width = "20%" align = "right">ชื่อผู้สร้าง:</td>
+                <td align ="left"><asp:TextBox ID="txtCreateUser" runat="server" Width="198px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="20%">
+                    ไฟล์ :</td>
+                <td align="left">
+                    <asp:FileUpload ID="FileUpload" runat="server" Width="380px" />
+                </td>
+            </tr>
+            <tr>
+                <td align="right" width="20%">
+                    <asp:Label ID="lblID" runat="server" Visible="False"></asp:Label>
+                </td>
+                <td align="left">
+                    <asp:Button ID="btnCreateELAW" runat="server" 
+                        Text="บันทึกข้อมูล" Width="120px" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2" width="20%">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" DataKeyNames="file_id"
+                                        AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" 
+                                        CssClass="GridViewStyle" GridLines="None" Width="100%" 
+                        ForeColor="#333333">
+                                        <EditRowStyle BackColor="#2461BF" />
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:TemplateField HeaderText="เอกสาร">
+                                                <ItemTemplate>
+                                                    <b><asp:Label ID="Label1" runat="server" Text='<%# Bind("name") %>'></asp:Label></b>
+                                                    <br />
+                                                    <asp:HiddenField ID="HF" runat="server" Value='<%# Bind("file_id") %>' />
+                                                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("Detail") %>'></asp:Label>
+                                                </ItemTemplate>
+                                                <ItemStyle Width="65%" HorizontalAlign="Left" />
+                                            </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="ผู้อัพโหลด">
+                                                <ItemTemplate>
+                                                    <asp:Label ID="lblcreation_by" runat="server" Text='<%# Bind("creation_by") %>'></asp:Label>
+                                                </ItemTemplate>
+                                                <ItemStyle HorizontalAlign="Center" Width="20%" />
+                                            </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="ดาวน์โหลด">
+                                                <ItemTemplate>
+                                                    <asp:Label ID="lblLink" runat="server" Text=""></asp:Label>
+                                                </ItemTemplate>
+                                                <ItemStyle HorizontalAlign="Center" Width="15%" />
+                                            </asp:TemplateField>
+                                            <asp:TemplateField ShowHeader="False">
+                                                <ItemTemplate>
+                                                    <asp:ImageButton ID="ImageButton1" runat="server" CausesValidation="False" 
+                                                        CommandName="Delete" ImageUrl="~/Images/DeleteFolderHS.png" Text="Delete" 
+                                                        ToolTip="ลบ" />
+                                                </ItemTemplate>
+                                                <ItemStyle Width="15px" />
+                                            </asp:TemplateField>
+                                        </Columns>
+                                       <EmptyDataTemplate>
+                                        <table width="100%">
+                                        <tr>
+                                        <td align="center">
+                                        <asp:Label ID="Label8" runat="server" CssClass="sslbl_red" 
+                                        Text="***ไม่พบข้อมูล***"></asp:Label>
+                                        </td>
+                                        </tr>
+                                        </table>
+                                        </EmptyDataTemplate>
+                                        <FooterStyle BackColor="#507CD1" ForeColor="White" Font-Bold="True" />
+                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="#EFF3FB" />
+                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                    </asp:GridView>
+                </td>
+            </tr>
+            </table>
+        </asp:Panel>
+         </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+</center>
+</asp:Content>
+
+

@@ -1,0 +1,1049 @@
+﻿body, div, p, h1, h2, h3, h4, ul, li, table,Textarea
+{
+	border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    margin: 0;
+    font-family: Microsoft Sans Serif,Microsoft Sans Serif,Tahoma, Arial, sans-serif;
+    /*font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;*/
+	font-size: 8pt;
+  
+}
+body
+{
+	background-color:White;	
+   font-family: Microsoft Sans Serif,Microsoft Sans Serif,Tahoma, Arial, sans-serif;
+	font-size:75%;
+	margin:0px;
+	padding :0;
+	font-size: 8pt; 
+}
+
+/* Page master layout */
+
+.GV_RowStyle {
+   
+ 	font-family: Arial;    
+	font-size: 10pt; 
+    border: solid 1px gray;
+}      
+.GV_AlternatingRowStyle {
+	 text-align: left;
+	 background-color: Yellow;
+	 border: solid 1px gray;
+}      
+.GV_RowStyle td, .GV_AlternatingRowStyle td {
+	 padding: 0 3px;
+	 border: solid 1px gray;
+}
+
+
+#master_header
+{
+	margin: -1px  auto 0 auto;
+	width:100% ;  /* 1000px;*/
+	height:30px;
+	background-color:Black;
+}
+
+#master_header1
+{
+	float:left;
+	width:150px;
+	height:30px;
+	background: url(images/header2.jpg) repeat left top;
+}
+#master_header2
+{
+	float: left;
+	width: 30px;
+	margin-right:0px;
+	color: #666666;
+	height:30px;
+	background: url(image/corner-2.gif) no-repeat;
+}
+
+#master_menu
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	float:left ;
+	margin-right: 0px;
+	height:27px;
+	width: 165px;
+	/*text-align:center;
+	width:100%;
+	background: url(../images/btnNormal.png);*/
+}
+.master_menu
+{
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+    font-size: 16;
+	padding-top: 0px;
+	text-align:left;
+	color:White;
+	height:27px;
+	width: 165px;
+	/*background: url(../images/btnNormal.png);*/
+}
+.master_menu2
+{
+	padding-top: 0px;
+	text-align:left;
+	color:White;
+	width: 165px;
+
+}
+.master_menu a
+{
+	color:#000000;
+	font-weight:normal;
+	font-size: 1.3em;
+	text-decoration: none;
+	
+}
+
+.master_menu a:hover
+{
+	background-color:#EBF1F3;
+	font-style:normal  ;
+	font-weight:bold ;
+	color:#000000;
+}
+
+.master_menu a:visited
+{
+
+}
+.sub_menu
+{
+	padding-top: 0px;
+	text-align:left;
+	color:White;
+	padding-left: 25px;
+	width: 100%;
+}
+/*Link Menu*/
+#link_menu
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	float:left ;
+	margin-right: 0px;
+	height:20px;
+	font-weight: bold;
+}
+.link_menu
+{
+	padding-top: 0px;
+	text-align:left;
+	color:White;
+	font-size: 16px;
+	font-weight: bold;
+
+}
+
+.link_menu a
+{
+	color:White;
+	font-weight: bold;
+	font-size: 16px;
+	text-decoration: none;
+	
+}
+
+.link_menu a:hover
+{
+	background-color:#990000;
+	font-style:normal ;
+	color:#FFFF66;
+}
+
+
+#master_footer
+{
+	margin: 0px  auto 0 auto;
+	width:100%;  /*1000px;*/
+	height:30px;
+	background-color:Black;
+}
+#master_footer_left
+{
+	clear: both;
+	float:left;
+	width:84%;  /*810px;*/
+	height:20px;
+	padding: 10px 0 0px 10px;
+	color: #333;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+}
+#master_footer_left
+{
+	clear: both;
+	float:left;
+	width:84%;  /*810px;*/
+	height:20px;
+	padding: 10px 0 0px 10px;
+	color: #333;
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+}
+#master_footer1
+{
+	float: left;
+	width: 30px;
+	margin-right: 0px;
+	color: #666666;
+	height:30px;
+	background: url(image/corner-1.gif) no-repeat;
+}
+
+#master_footer2
+{
+	float: left;
+	width: 150px;
+	margin-right: 0px;
+	color: #666666;
+	height:30px;
+	background: url(image/corner-3.gif) repeat left top;
+}
+
+#master_page1
+{
+	margin: 0px  auto 0 auto;
+	width:100%;  /*1000px;*/
+	background-color:White;
+}
+#master_page
+{
+	margin: 0px  auto 0 auto;
+	width:100%; /*1000px;*/
+	height:auto;
+	background-color:White;
+}
+
+
+
+
+#sidebar
+{
+	/*
+	margin-top:20px;
+	margin-bottom: 10px;
+*/
+	padding:  20px 0 10px 0;
+	width: 100%;
+	background-color:White;
+
+}
+#header, #footer {
+display: none;
+}
+
+.sidebarheader
+{
+	height: 15px;
+	padding:  5px 10px 0  20px;
+	margin-right:20px;
+	text-align:center;
+	/*background: url(image/sidebar_header.png) no-repeat left top;*/
+	/*background:url(image/bg_nav.gif) repeat left top;*/
+	background-color:gray;
+	border-bottom-color:gray; 
+	border-bottom-style: double;	
+	color:White;
+	font-size: 1.0em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.sidebarcontent
+{	
+	/*border: 1px solid #0F2543;*/
+	padding: 20px 10px 20px 30px;
+	/*text-align:right;*/
+	line-height: 1.5em;
+	font-weight: bold;
+}
+
+.sidebarcontent a
+{
+	color:Black;
+	font-weight:normal;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+.sidebarcontent a:hover
+{
+	background-color:White;
+	font-style:normal;
+	color:White;
+}
+
+.sidebarcontent a:visited
+{
+}
+
+
+#left_menu1
+{	
+	padding-left:20px;
+	padding-top: 20px;
+	background: #FFF url(image/samples_bg.gif) no-repeat left top;
+}
+
+#left_menu2
+{
+	padding-top: 72px;
+	background: #FFF url(image/walkthrough_bg.gif) no-repeat left top;
+}
+
+/*Left menu layout*/
+#left_bar
+{
+	/*float: left;*/
+
+	float: left;
+	padding:  20px 0 10px 20px;
+	width:160px;
+	background: #FFF url(image/walkthrough_bg.gif) no-repeat left top;
+}
+
+/*Result bar layout*/
+
+#right_bar
+{
+	float: left;
+	padding:   20px  0 10px 20px;
+	width:610;
+	margin-right: 0px;
+	background: #FFF url(image/walkthrough_bg.gif) no-repeat left top;
+	/*color: #666666;*/
+	/*background-color:White;*/
+	/*border:dashed 1px black;*/
+}
+
+
+.page_caption
+{
+	color:blue;
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 24pt; 
+	height:50px; 
+	
+}
+.page_caption2
+{
+	color:Black;
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 18pt; 
+	height:50px; 
+	
+}
+.page_caption3
+{
+	color:Black;
+	font-family: Microsoft Sans Serif,Tahoma, Arial, sans-serif;
+	font-size: 14pt; 
+	height:50px; 
+	
+}
+.page_caption4
+{
+	color:Black;
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 10pt; 
+	font-weight: bold;
+	height:20px; 
+	
+}
+.page_caption5
+{
+	color:Black;
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 10pt; 
+	height:20px; 
+	
+}
+.menu_font
+{
+	color:White;
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 10pt; 
+		
+}
+
+.page_menu
+{
+	color:Black;
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 14pt; 
+	height:20px; 
+
+}
+.txtLeft
+{
+	float: left;
+	Width: 160px;
+}
+.subpage_caption
+{
+	color:Black;
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 14pt; 
+	height:50px; 
+	background-color:White;
+	width:100%;
+}
+.big_text
+{
+	color:White;
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 14p
+
+
+}
+
+/*Gridview Styles*/
+.GridViewStyle
+{   
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+    font-size:14px;
+    border: 1px solid gray;
+	padding: 4px;
+	height:auto;
+	text-align: left;
+	
+}
+.AddData
+{   
+    border-right: solid 1px  gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 4px;
+    height:auto;
+    width:100%;
+    background-color: #FFFFFF;
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+
+   
+}
+.GEmpty
+{   
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+    font-weight: bold;
+    font-size: 10pt; 
+    color :red;
+    width:100%;
+    background-color: #ffffff;
+    }
+.QaRp
+{   
+    border-right: solid 1px  gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 4px;
+    height:auto;
+    width:80%;
+    background-color: #D6F1FC;
+}
+.White
+{   
+    border-right: solid 1px  gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 4px;
+    height:auto;
+    width:100%;
+    background-color: #fffafa;
+}
+.White_Small
+{   
+    border-right: solid 1px  gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 4px;
+    height:auto;
+    width:50%;
+    background-color: #fffafa;
+}
+.Gray
+{   
+    border-right: solid 1px  gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 4px;
+    height:auto;
+    width:100%;
+    background-color: #cccccc;
+}
+.Goal
+{   
+    border-right: solid 1px  gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 4px;
+    height:auto;
+    width:100%;
+    background-color: #add8e6;
+}
+.Black
+{   
+   /* border-right: solid 0px  gray;
+    border-bottom: 0px solid gray;
+    border-left: 0px solid gray;
+    border-top: 0px solid gray;*/
+    padding: 0px;
+    height:auto;
+    width:1024px;
+    background-color: #EBF1F3;
+   
+    
+}
+.LineBlue
+{   
+    border-right: solid 0px  gray;
+    border-bottom: 0px solid gray;
+    border-left: 0px solid gray;
+    border-top: 0px solid gray;
+    padding: 0px;
+    height:auto;
+    width:100%;
+    background-color: #EBF1F3;
+}
+.ContentBlue
+{   
+    border-right: solid 0px  gray;
+    border-bottom: 0px solid gray;
+    border-left: 0px solid gray;
+    border-top: 0px solid gray;
+    padding: 0px;
+    height:auto;
+    width:85%;
+    background-color: #EBF1F3;
+}
+.GridBlue
+{   
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	color:White;
+	font-weight:normal;
+	font-size: 14px;
+    height:auto;
+    width:85%;
+    background-color: #EBF1F3;
+}
+.HeaderGreen
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	color:#4D4D4D;
+	font-weight:bold;
+	font-size: 16px;
+	background-color:#CAEBF4;
+	height :25px;
+	padding: 2px;
+    width: 100%;
+}
+.HeaderGreenTab
+{   
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+   	color:#4D4D4D;
+	font-weight:bold;
+	font-size: 16px;
+	background-color:#CAEBF4;
+	height :25px;
+	padding: 2px;
+    width: 100%;
+}
+.HeaderTab
+{   
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+   	color:#4D4D4D;
+	font-weight:bold;
+	font-size: 14px;
+	background-color:#CAEBF4;
+	height :20px;
+	padding: 2px;
+}
+.HeaderGreen_1
+{   
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+   	color:#4D4D4D;
+	font-weight:bold;
+	font-size: 14px;
+	background-color:#CAEBF4;
+	height :25px;
+	padding: 2px;
+}
+.HeaderTab_1
+{   
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+   	color:#4D4D4D;
+	font-weight:bold;
+	font-size: 14px;
+	background-color:#CAEBF4;
+	height :20px;
+	padding: 2px;
+    width: 100%;
+}
+.ContentText
+{   
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+   	color:#000000;
+	font-weight:bold;
+	font-size: 14px;
+	vertical-align :top;
+}
+.Orange
+{   
+    border-right: solid 1px  gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 4px;
+    height:auto;
+    width:100%;
+    background-color: #FFE7B9;
+}
+.Violet
+{   
+    border-right: solid 1px  gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 4px;
+    height:auto;
+    width:100%;
+    background-color: #EBE9F8;
+}
+.DataDetail
+{   
+    border-right: solid 1px  gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+    padding: 4px;
+    height:auto;
+    width:100%;
+    background-color: #FFCB97;
+    /*font-weight: bold;*/
+    /*font-size: 10pt; */
+    /*vertical-align:middle;*/
+   
+}
+.ReportStyle
+{   
+   
+    height:auto;
+    width:100%;
+}
+.GridViewStyle a
+{    font-weight: 700;
+}
+
+.GridViewHeaderStyle th
+{
+    background-color: #DAA520;
+    border-left: 1px solid #EBE9ED;
+    border-right: 1px solid #EBE9ED;
+    height:20px;
+    vertical-align:middle;
+   
+    /*text-align:justify;*/
+}
+
+.GridViewHeaderStyle
+{
+    background-color: #DAA520;
+    font-weight: bold;
+    color: White;
+    text-align:justify;
+    
+}
+
+.GridViewFooterStyle
+{
+    background-color: #DAA520;
+    font-weight: bold;
+    color: White;
+}
+
+.GridViewRowStyle
+{
+    background-color: #F7F6F3;
+    color: #333333;
+}
+
+.GridViewAlternatingRowStyle
+{
+    background-color: #FFFFFF;
+    color: #284775;
+}
+
+.GridViewRowStyle td, .GridViewAlternatingRowStyle td
+{
+    border: 1px solid #EBE9ED;
+    height:20px;
+    vertical-align:middle;
+}
+
+.GridViewSelectedRowStyle
+{
+    background-color: #E2DED6;
+    font-weight: bold;
+    color: #333333;
+}
+
+.GridViewPagerStyle
+{
+    background-color: #DAA520;
+    color: #FFFFFF;
+}
+
+.GridViewPagerStyle table /* to center the paging links*/
+{
+    margin: 0 auto 0 auto;
+}
+
+.GridViewFooterStyle
+{
+    background-color: #DAA520;
+    color: #FFFFFF;
+}
+
+/*Panel Styles*/
+.PanelStyle
+{   
+    height:auto;
+    width:100%; 
+}
+.sslblcus
+ {
+	font-family: "MS Sans Serif";
+	
+ }
+ 
+.sslbl
+{
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+  
+	font-size: 14px;
+	color: #000000;
+	font-weight :normal;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+   	
+}
+.sslbl_red
+{
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+  	font-size: 14px;
+	color: Red;
+	font-weight :normal;
+	padding: 1px;
+   	
+}
+.sslbl_bold
+{
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+  
+	font-size: 14px;
+	color: #000000;
+	font-weight :bold;
+	text-decoration: none;
+	vertical-align:top;
+	padding: 1px;
+    width: 85%;
+}
+.sslbl_black
+{
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+  
+	font-size: 14px;
+	color: #000000;
+	font-weight :bold;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+   	
+}
+.sslbl_black_n
+{
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+  
+	font-size: 14px;
+	color: #000000;
+	font-weight :normal;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+   	
+}
+.sslbl_gray
+{
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+    background-color: #CCCCCC;
+	font-size: 14px;
+	color: #000000;
+	font-weight :bold;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+   	
+}
+.sslbl_right
+{
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+ 	font-size: 14px;
+	color: #000000;
+	font-weight :normal;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+	text-align :right ;
+   	
+}
+.ssddl 
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+  	font-size: 13px;
+	color: #000000;
+	font-weight :normal;
+	text-decoration: none;
+	vertical-align:top ;
+	padding: 1px;
+}
+
+.ssddl_right
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	background-color: White;
+    margin-left: 0px;
+    text-align :right ;
+}
+
+
+.ssDropDownList {
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #FFFFFF;
+}
+
+.ssDropDownList {
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #FFFFFF;
+}
+
+.ssddlcus {
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 14px;
+}
+
+.ssCheckBox {
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+	
+}
+.ssbtn {
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	font-size: 14px;
+	text-decoration: none;
+	width: 70px;
+	cursor:hand;
+}
+
+gw_cs
+		{
+		font-size: 12px;
+		font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+		font-weight:normal;
+		width:100%;
+		text-align: left;
+		
+		
+}
+th {
+	background-color: #007DB3;
+	font-size: 14px;
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	color: Black;
+	background-image: url(../images/th_bg.gif);
+	/*BORDER-BOTTOM: #ffffff 1px solid;
+	BORDER-LEFT: #ffffff 1px solid;
+	BORDER-RIGHT: #ffffff 1px solid;
+	BORDER-TOP: #ffffff 1px solid;*/
+     
+}
+table.form 
+{
+	/*background-color: #FFFFFF;*/
+	width:100%;
+}
+table.form td.head 
+{
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+
+}
+table.form 
+{
+	/*background-color: #FFFFFF;*/
+	width:100%;
+    height: 36px;
+}
+table.form td.caption 
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #006699;/*table head*/
+	font-size: 14px;
+	vertical-align:top;
+	}
+
+table.form td.caption 
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC; 
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #006699;/*table head*/
+	font-size: 14px;
+	vertical-align:top;
+	}
+
+table.form td.caption_cus
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	color: #000000;
+	background-color: #6699ff;
+	font-size: 14px;
+	vertical-align:top;
+	
+}
+table.form td.caption1 
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	color: #000000;
+	background-color: #6699ff;
+	font-size: 14px;
+	width: 15%; 
+		
+}
+table.form td.detail 
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC; 
+	color: #000000;	
+	/*background:url("../images/bg001.jpg");*/
+	background-color: #D7EBFF;/*table detail*/
+	vertical-align:top;
+}
+table.form td.detail_cus 
+{
+	font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+	color: #000000;
+	background-color: #e6e6fa;
+	vertical-align:top;
+	
+}
+table.form td.note {
+	font-size:10px;
+	color: #000000;
+	background-color: #FFCBA8;
+}
+table.form td.foot {
+	font-size: 12px;
+	color: #FF6F0F;
+	background-color: #000000;
+}
+table.form td.foot table.foot td.event {
+	font-size: 12px;
+}
+/*Tab Menu*/
+
+.tab_menu
+{
+	background: url(../images/a_b2.png);
+	/*font-style:normal ;#E1EC6B เหลือง
+	color:#FFFF66;*/
+	height:43px;
+	width :163px;
+	text-align :center ;
+}
+.tab_button
+{
+	background: url(../images/button_tab.png);
+	/*font-style:normal ;
+	color:#FFFF66;*/
+	height:43px;
+	width :163px;
+	text-align :center ;
+}
+.tab_menu_td
+{
+    height:43px;
+	width :163px;
+	text-align :center ;
+}
+.CustomTabStyle .ajax__tab_header {
+    font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+    font-size:11px;
+   
+ 
+}
+.BackColorTab
+    {
+        font-family: "MS Sans Serif", "Microsoft Sans Serif", AngsanaUPC;
+        font-size: 10px;
+        color:Gray;
+        background-color:Silver; 
+    }
+
+.TabContentBlue
+{   
+    border-right: solid 0px  gray;
+    border-bottom: 0px solid gray;
+    border-left: 0px solid gray;
+    border-top: 0px solid gray;
+    padding: 0px;
+    height:auto;
+    width:100%;
+    background-color: #EBF1F3;
+}
+.TabContentBluePopUp
+{   
+    border-right: solid 0px  gray;
+    border-bottom: 0px solid gray;
+    border-left: 0px solid gray;
+    border-top: 0px solid gray;
+    padding: 0px;
+    height:auto;
+    width:700px;
+    background-color: #EBF1F3;
+}
+.fbook
+{
+	
+    text-decoration:underline;
+      
+ }
+.line01{background:url(../images/line.gif) repeat-x; width:300px; height:20px;}
+.line02{background:url(../images/line.gif) repeat-x; width:400px; height:20px;}

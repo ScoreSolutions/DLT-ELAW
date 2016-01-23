@@ -1,0 +1,317 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPageDLT.master.vb" Inherits="home_MasterPageDLT" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+ 
+    <title>Untitled Page</title>
+    
+    <LINK href="../styles/SlideMenu.css" type="text/css" rel="stylesheet">
+        
+    <link href="../StyleSheet/StyleSheet.css" rel="stylesheet" type="text/css" /> 
+    <script type="text/javascript" language="javascript" src="../scripts/novajava.js"></script>
+           <script type="text/javascript" src="<%= ResolveUrl("menu.js") %>"></script>
+       
+        <script type="text/javascript">
+
+            function lefthide() {
+                var fr = document.getElementById("<%=sbCont.ClientID%>"); 
+                if (fr.style.display == "") {
+                    fr.style.display = "none";
+                    change('outlookside', 'outlookBarExpand')
+                }
+                else {
+                    fr.style.display = "";
+                    change('outlookside', 'outlookBarcollapse')
+                }
+
+            }
+            function change(id, newClass) {
+
+                identity = document.getElementById(id);
+
+                identity.className = newClass;
+
+            }
+          </script>
+            <script type="text/javascript">
+function toggle(flag) {
+var el = document.getElementById(“LeftNavigationAreaCell”);
+if ( el.style.display != ‘none’ ) {
+el.style.display = ‘none’;
+}
+else {
+el.style.display = ”;
+}
+}
+ </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+        .style1
+        {
+            width: 100%;
+            height: 20px;
+            
+        }
+  
+    .StyleBlue
+        {
+            border: 1px solid #CCCCCC;
+            BACKGROUND-COLOR: #336699;
+            COLOR: #FFFFFF;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            font-weight: bold;
+            font-style: normal;
+            font-variant: normal;
+            font-size: 11px;
+            line-height: normal;
+            font-family: Arial,Microsoft Sans Serif,sans-serif,Verdana, Geneva,  Helvetica;
+            text-align: left;
+            height: 100%;
+            width:100%;
+        }
+.Marquee
+        {
+            padding-left: 5px;
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            font-weight: bold;
+            font-style: normal;
+            font-variant: normal;
+            font-size: 11px;
+            line-height: normal;
+            font-family: Arial,Microsoft Sans Serif,sans-serif,Verdana, Geneva,  Helvetica;
+            text-align: left;
+            height: 100%;
+			width:100%;
+        }
+.SMMenu {
+    width:145px;
+}
+
+.SMParent {
+	background-image:url('../../eLaw/images/tab.gif');
+	background-color:Gray;
+	color:white; 
+	text-align:center; 
+	padding:4px;
+	cursor:pointer; cursor:hand;
+	font-weight:bold;
+            font-style: normal;
+            font-variant: normal;
+            font-size: 12px;
+            line-height: normal;
+            font-family: arial;
+        }
+
+.SMChildrenBox {
+
+    background-image:url('../../eLaw/images/bg2.gif');
+    border-bottom:1px solid white;
+    border-left:1px solid white;
+    border-right:1px solid white;
+    text-align:center;
+	width:206px;
+}
+.subMenu
+{
+
+   display:none;
+}
+
+.SMChild {
+    font:12px arial; 
+    color:#2D466F; 
+    text-align:center;
+
+}
+
+.SMChildImage {
+	vertical-align:middle;
+	border:0px solid black;
+	margin-right:6px;
+}
+    </style>
+</head>
+<body>
+    <form id="form2" runat="server">
+    <table class="style1" style="width: 100%; height: 100%" width="100%">
+        <tr>
+            <td class="StyleBlue" style="height: 100%">
+                <cc1:toolkitscriptmanager ID="ToolkitScriptManager1" runat="server" 
+                    enablescriptglobalization="True">
+            </cc1:toolkitscriptmanager>
+                <br />
+                <marquee behavior="slide" class="Marquee" direction="left" height="20px" 
+                    loop="1" scrollamount="3" scrolldelay="1">System&nbsp; Development : Department Of Information Technology M.C.S.Steel Public Company Limited Copyright 2009</marquee>
+            </td>
+        </tr>
+    </table>
+    <table id="TABLE1" runat="server" border="0" cellpadding="0" cellspacing="0" 
+        style="HEIGHT: 550px">
+        <tr style="FONT-SIZE: 7pt; COLOR: #000000; HEIGHT: 100%">
+            <td id="sbCont" class="StyleBlue" 
+                style="WIDTH: 10%; HEIGHT: 100%; BACKGROUND-COLOR: #E7EBF0" valign="top">
+                <!--------Start Menu 1 ---------->
+                       
+                 <div class="SMMenu" state="0" style="WIDTH: 205px">
+                     <div class="SMParent" onmouseover="Init(this);" style="WIDTH: 200px">
+                         ฝ่ายประสานงาน
+                     </div>
+                     <div class="SMChildrenBox">
+                         <div class="subMenu" state="0">
+                             <span class="SMChild" classout="SMChild" classover="SMChild" 
+                                 style="COLOR: #000000">
+                             <br />
+                             <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/upload.gif" />
+                             <br />
+                             <asp:HyperLink ID="HyperLink13" runat="server" Font-Bold="True" 
+                                 NavigateUrl="http://docexc.mcssteel.co.th" Target="_blank">Document Exchange</asp:HyperLink>
+                             </span>
+                             <br />
+                         </div>
+                     </div>
+                </div>
+                 <%--PD--%>
+                <div class="SMMenu" state="0" style="WIDTH: 203px">
+                    <div class="SMParent" onmouseover="Init(this);" style="WIDTH: 200px">
+                        ฝ่ายผลิต
+                    </div>
+                    <div class="SMChildrenBox">
+                        <div class="subMenu" state="0">
+                            <span class="SMChild" classout="SMChild" classover="SMChild" 
+                                style="COLOR: #000000">
+                            <br />
+                            <img class="SMChildImage" src="../../MCSIT/images/application.jpg" /><br />
+                            <asp:HyperLink ID="HyperLink5" runat="server" Font-Bold="True" 
+                                NavigateUrl="http://mcsapp.mcssteel.co.th" Target="_blank">Mcs Application</asp:HyperLink>
+                            </span>
+                            <br />
+                            <span class="SMChild" classout="SMChild" classover="SMChild" 
+                                style="COLOR: #000000">
+                            <br />
+                            <img class="SMChildImage" src="../../MCSIT/images/Barcode.jpg" /><br />
+                            <asp:HyperLink ID="HyperLink6" runat="server" Font-Bold="True" 
+                                NavigateUrl="http://barcode.mcssteel.co.th" Target="_blank">Bacoda</asp:HyperLink>
+                            </span>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+               <%-- HR--%>
+                 <div class="SMMenu" state="0" style="WIDTH: 205px">
+                     <div class="SMParent" onmouseover="Init(this);" style="WIDTH: 200px">
+                         ฝ่ายบุคคล
+                     </div>
+                     <div class="SMChildrenBox">
+                         <div class="subMenu" state="0">
+                             <span class="SMChild" classout="SMChild" classover="SMChild" 
+                                 style="COLOR: #000000">
+                             <br />
+                             <asp:ImageButton ID="IBhrrp" runat="server" ImageUrl="~/Images/rp3.jpg" />
+                             <br />
+                             &nbsp;<asp:LinkButton ID="LinkHrRepair" runat="server" Font-Bold="True">แจ้งซ่อม</asp:LinkButton></span><br />
+                             <span class="SMChild" classout="SMChild" classover="SMChild" 
+                                 style="COLOR: #000000">
+                             <br />
+                             <asp:ImageButton ID="IBcar" runat="server" ImageUrl="~/Images/car.jpg" />
+                             <br />
+                             <asp:LinkButton ID="LinkCar" runat="server" Font-Bold="True">จองรถ</asp:LinkButton>
+                             &nbsp;<br />
+                             </span>
+                         </div>
+                     </div>
+                </div>
+                <%--IT--%>
+                <div class="SMMenu" state="0" style="WIDTH: 202px; font-weight: bold;">
+                    <div class="SMParent" onmouseover="Init(this);" style="WIDTH: 200px">
+                        ฝ่ายเทคโนโลยีสารสนเทศ</div>
+                    <div class="SMChildrenBox">
+                        <div class="subMenu" state="0">
+                            <span class="SMChild" classout="SMChild" classover="SMChild" 
+                                style="COLOR: #000000">
+                            <br />
+                            &nbsp;<asp:ImageButton ID="IBrp" runat="server" ImageUrl="~/Images/rp.gif" />
+                            <br />
+                            &nbsp;<asp:LinkButton ID="LinkRepair" runat="server" Font-Bold="True">Repair</asp:LinkButton><br />
+                            <br />
+                            &nbsp;<asp:ImageButton ID="IBrq" runat="server" ImageUrl="~/Images/rq.gif" />
+                            <br />
+                            &nbsp;</span><span class="SMChild" classout="SMChild" classover="SMChild" 
+                                style="COLOR: black"><asp:LinkButton ID="LinkRequest" runat="server" 
+                                Font-Bold="True">Request</asp:LinkButton><br />
+                            <br />
+                            &nbsp;<asp:ImageButton ID="IBmeeting" runat="server" 
+                                ImageUrl="~/Images/meeting.gif" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink4" runat="server" Font-Bold="True" 
+                                NavigateUrl="http://meeting.mcssteel.co.th" Target="_blank">Conference Room</asp:HyperLink>
+                            &nbsp;<br />
+                            <br />
+                            <asp:ImageButton ID="IBot" runat="server" ImageUrl="~/Images/money.jpg" />
+                            <br />
+                            &nbsp;<asp:LinkButton ID="LinkOT" runat="server" Font-Bold="True">OT</asp:LinkButton><br />
+                            <br />
+                            <asp:ImageButton ID="IBdvd" runat="server" ImageUrl="~/Images/DVD.jpg" />
+                            <br />
+                            <asp:LinkButton ID="LinkDVD" runat="server" Font-Bold="True">DVD</asp:LinkButton>
+                            &nbsp;<br />
+                            <br />
+                            <asp:ImageButton ID="IBedoc" runat="server" ImageUrl="~/Images/edoc.gif" />
+                            <br />
+                            <asp:LinkButton ID="LinkEdoc" runat="server" Font-Bold="True">E-Document</asp:LinkButton>
+                            &nbsp;<br />
+                            <br />
+                            <asp:ImageButton ID="IBcheck" runat="server" ImageUrl="~/Images/check.jpg" />
+                            <br />
+                            <asp:LinkButton ID="LinkDaily" runat="server" Font-Bold="True">Daily Check</asp:LinkButton>
+                            &nbsp;<br />
+                            <br />
+                            <asp:ImageButton ID="IBadmin" runat="server" 
+                                ImageUrl="~/Images/id_card_ok.png" />
+                            <br />
+                            <asp:LinkButton ID="LinkAdmin" runat="server" Font-Bold="True">AdminTool</asp:LinkButton>
+                            &nbsp;<br />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="SMMenu" state="0" style="WIDTH: 146px; HEIGHT: 1px">
+                    <div class="SMParent" style="WIDTH: 200px">
+                        <span style="COLOR: white">
+                        <asp:HyperLink ID="HyperLink1" runat="server" Font-Underline="False" 
+                            NavigateUrl="~/frmLogin.aspx?page=Index/Login.aspx   " style="COLOR: white">ออกจากระบบ</asp:HyperLink>
+                        </span>
+                    </div>
+                </div>
+            </td>
+            <td align="center" background="../../eLaw/images/collapse_side_bg.gif" 
+                style="WIDTH: 6px; HEIGHT: 100%; BACKGROUND-COLOR: #e7ebf0" valign="middle">
+                <img id="outlookside" class="outlookBarCollapse" height="45" 
+                   onmousemove="lefthide(this);" src="../images/slidbtn.JPG" 
+                    style="CURSOR: pointer" width="5" /></td>
+            <td align="center" 
+                style="FONT-WEIGHT: bold; FONT-FAMILY: Tahoma; background-color: white; text-align: right; height: 100%; width: 100%;" 
+                valign="top">
+                
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div>
+    </div>
+    </form>
+</body>
+</html>
